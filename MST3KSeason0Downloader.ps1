@@ -10,7 +10,7 @@ $mst3k = iwr 'https://archive.org/details/mst3k_season_0' -UseBasicParsing -User
 ###Get all mp4 links###
 $links=$mst3k.links.href | where {$_ -like "*.mp4"}
 
-###Where you want the file stored###
+###Where you want the files stored###
 Add-Type -AssemblyName System.Windows.Forms
 $FolderBrowser = New-Object System.Windows.Forms.FolderBrowserDialog
 $FolderBrowser.Description = 'Select a folder'
